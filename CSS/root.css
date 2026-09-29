@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+    /*NKijpma url: github.com/NKijpma     - niet mijn github*/
+    --dark: black;
+    --light: white;
+}
+
+body.light {
+    --dark: white;
+    --light: black;
+}

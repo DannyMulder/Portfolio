@@ -1,0 +1,57 @@
+.about {
+    height: auto;
+}
+
+.about .info-box {
+    position: relative;
+    min-height: 25vh;
+    width: 100%;
+    box-shadow: 5px 5px 5px 0 black;
+    border: 1px solid var(--light);
+    border-radius: 20px;
+    margin-bottom: 2.5%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 10% 90%;
+}
+
+.about img {
+    position: relative;
+    top: 10%;
+    left: 50%;
+    border-radius: 50%;
+    width: 80%;
+    transform: translateX(-50%);
+    aspect-ratio: 1;
+}
+
+.about .content {
+    display: flex;
+    flex-direction: column;
+}
+
+.about .title, .about .text {
+    width: 100%;
+    outline: 1px solid var(--light);
+    margin: 1% auto;
+    border-radius: 10px;
+    font-size: 1vw;
+    padding: 10px;
+}
+
+.about .content .title {
+    height: 20%;
+}
+
+.about .content .text {
+    min-height: 60%;
+}
+
+@media (max-width: 600px) {
+    .about .text {
+        font-size: 1vh;
+    }
+    .about .title {
+        font-size: 1.5vh;
+    }
+}

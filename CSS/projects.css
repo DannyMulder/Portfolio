@@ -1,0 +1,30 @@
+.projects {
+    overflow: hidden;
+    height: 50vw;
+    padding: 0 0 10vh;
+}
+
+.projects .projects-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-shadow: var(--light) 1vw 0 1vw 0;
+}
+
+.projects #scrollbar {
+    width: 100%;
+    height: 100%;
+}
+
+.projects .box {
+    position: absolute;
+    height: 100%;
+    aspect-ratio: 1;
+    border-radius: 1vw;
+}
+
+@media (max-width: 600px) {
+    .projects {
+        height: 35vh;
+    }
+}

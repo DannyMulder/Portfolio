@@ -1,0 +1,95 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--dark);
+    color: var(--light);
+    transition: background .5s ease, color .5s ease;
+}
+
+.center_JS {
+    text-align: center;
+    align-self: center;
+}
+
+.center_CSS {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center_right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.center_horizontal {
+    display: flex;
+    justify-content: center;
+}
+
+.center_vertical {
+    display: flex;
+    align-self: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    user-select: none;
+    font-family: 'Press Start 2P', monospace;
+    background-size: 100% 100%;
+}
+
+.observe {
+    opacity: 0;
+}
+
+.navbar .menu, .navbar .logo, .home, .about, .skills, .projects, .collabs {
+    padding: 0 5vw;
+    margin: auto;
+}
+
+.navbar, .home, .about, .skills, .projects {
+    width: 100vw;
+}
+
+.home, .about, .skills, .projects {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.subheading {
+    width: 20%;
+    height: 5vh;
+    border-bottom: 1px solid var(--light);
+    box-shadow: 10px 10px 10px 0 black;
+    margin: 7.5% auto 5%;
+    font-size: 1.75vw;
+}
+
+@media (max-width: 600px) {
+
+}
+
+.menu-btn:hover {
+    color: wheat;
+}
+
+#color-mode-btn {
+    position: fixed;
+    right: 1vw;
+    bottom: 1vw;
+    width: 5vh;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: var(--light);
+    background-image: url("../Images/color-mode.png");
+    z-index: 999;
+    cursor: pointer;
+}

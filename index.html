@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="CSS/root.css">
+    <link rel="stylesheet" href="CSS/animations.css">
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/navbar.css">
+    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="stylesheet" href="CSS/about.css">
+    <link rel="stylesheet" href="CSS/skills.css">
+    <link rel="stylesheet" href="CSS/projects.css">
+    <link rel="stylesheet" href="CSS/hobbies.css">
+    <link href="Images/cat.png" rel="icon" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div id="color-mode-btn" onclick="ToggleColors()"></div>
+
+<header>
+    <nav class="navbar">
+    <div class="logo" onclick="location.reload()"><a>Portfolio</a></div>
+    <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="menu-btn center_CSS">≡</div>
+    <!-- <img style="border-radius: 50%" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="40">-->
+</nav>
+</header>
+
+<main>
+    <section class="home" id="home">
+        <div class="home-content">
+            <div class="text center_JS" id="home-text-3">And this is my portfolio</div>
+            <div class="content">
+                <div class="text center_JS" id="home-text-1">Hello, my name is Danny Mulder</div>
+                <div class="text center_JS" id="home-text-2">I am a Software Developer</div>
+            </div>
+            <img class="img" src="Images/cat.png" alt="">
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="subheading center_CSS observe">About</div>
+        <div class="about-content">
+            <div class="info-box observe">
+                <img src="Images/unknownUser.png" alt="">
+                <div class="content">
+                    <div class="title center_CSS">About me</div>
+                    <div class="text center_CSS">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci ea
+                        harum illum ipsam nam. Ab aliquid beatae dolor ex expedita ipsum, iste laborum natus, nemo
+                        numquam officiis possimus, quas tempora!
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box center_right observe">
+                <img src="Images/questionMark.png" alt="">
+                <div class="content">
+                    <div class="title center_CSS">Why Software Developer?</div>
+                    <div class="text center_CSS">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur
+                        aut commodi enim eos explicabo iure nesciunt quibusdam quis rem ut. Dolores, enim expedita ipsam
+                        iusto labore minima quasi suscipit tenetur. Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Beatae dicta doloremque eaque eos magnam magni voluptas voluptatum. Cupiditate deserunt
+                        iusto nesciunt, nostrum perspiciatis porro tempore vero. Adipisci aliquid similique tempore?
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box center_right observe">
+                <img src="Images/future.png" alt="">
+                <div class="content">
+                    <div class="title center_CSS">Future</div>
+                    <div class="text center_CSS">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
+                        aperiam architecto aut blanditiis dolor eius illum iste molestias, natus nostrum placeat porro
+                        quo saepe sed temporibus totam vel velit voluptatem. Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Accusantium aspernatur consequatur, enim et eum facilis id illum inventore
+                        nesciunt nobis non nostrum, numquam provident quam rerum sint soluta totam voluptatibus! Lorem
+                        ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam eligendi, est expedita fuga
+                        in incidunt, ipsa libero maiores molestias nisi odit praesentium quae quam quod recusandae
+                        veritatis voluptate voluptatum?
+                    </div>
+                </div>
+            </div>
+
+            <a href=Images/cv.pdf download>
+                <button>Download mijn CV</button>
+            </a>
+        </div>
+    </section>
+    <section class="skills" id="skills">
+        <div class="subheading center_CSS observe">Skills</div>
+        <div class="skills-content observe">
+            <div class="text">
+                <div class="title">Explanations</div>
+                <hr>
+                <br>
+                <p>I really enjoy playing around with JavaScript. You can make everything so interactive. HTML is so boring
+                    , but you can not go without it. CSS on the other hand I do not wanna talk about. Hate it. I also love
+                    working with databases and do not know why?
+                    <br>
+                    <br>
+                    Never really used
+                    PHP a lot. C# I just do not use except when I am using Unity.</p>
+                <span>100% means I fully understand how to work with the language. This includes work speed and knowledge</span>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <p><span>HTML</span></p>
+                    <div class="bar">
+                        <div class="filler" style="width: 70%;"></div>
+                    </div>
+                    <p>70%</p>
+                </div>
+                <div class="row">
+                    <p><span>CSS</span></p>
+                    <div class="bar">
+                        <div class="filler" style="width:  5%; margin-left: -5%; background-color: red"></div>
+                    </div>
+                    <p>-1%</p>
+                </div>
+                <div class="row">
+                    <p><span>JAVASCRIPT</span></p>
+                    <div class="bar">
+                        <div class="filler" style="width: 50%;"></div>
+                    </div>
+                    <p>50%</p>
+                </div>
+                <div class="row">
+                    <p><span>PHP</span></p>
+                    <div class="bar">
+                        <div class="filler" style="width: 50%;"></div>
+                    </div>
+                    <p>50%</p>
+                </div>
+                <div class="row">
+                    <p><span>SQL</span></p>
+                    <div class="bar">
+                        <div class="filler" style="width: 70%;"></div>
+                    </div>
+                    <p>70%</p>
+                </div>
+                <div class="row">
+                    <p><span>C#</span></p>
+                    <div class="bar">
+                        <div class="filler" style="width: 40%;"></div>
+                    </div>
+                    <p>40%</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="projects" id="projects">
+        <div class="subheading center_CSS observe">Projects</div>
+        <div class="projects-content observe">
+            <div id="scrollbar">
+                <div style="background-image: url(Images/cat.png);"
+                     class="box"></div>
+                <div style="background-image: url(Images/cat1.png);"
+                     class="box"></div>
+                <div style="background-image: url(Images/cat2.png);"
+                     class="box"></div>
+            </div>
+        </div>
+    </section>
+    <section class="hobbies" id="hobbies">
+        <div class="subheading center_CSS observe">Hobbies</div>
+        <div class="hobbies-content">
+
+        </div>
+    </section>
+</main>
+
+<footer class="contact" id="contact">
+    <div class="contact-content">
+        ik ben de footer
+    </div>
+</footer>
+
+</body>
+<script src="JS/functions.js"></script>
+<script src="JS/projectScroll.js"></script>
+<script src="JS/index.js"></script>
+</html>

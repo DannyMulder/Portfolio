@@ -1,0 +1,74 @@
+.skills {
+    min-height: 50vh;
+}
+
+.skills .skills-content {
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px 0 black;
+    border: 1px solid var(--light);
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.skills .text {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.skills .text .title {
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+.skills .text span {
+    font-size: 0.75vw;
+    margin-top: auto
+}
+
+.skills p {
+    font-size: 1vw;
+    font-weight: 300;
+}
+
+.skills .container {
+    padding: 25px;
+}
+
+.skills .container .row {
+    width: 100%;
+    height: 5vh;
+    display: grid;
+    grid-template-columns: 20% 70% 10%;
+    margin-bottom: 2.5%;
+    padding: 10px;
+}
+
+.skills .container .row span {
+    text-decoration: underline;
+    font-size: 0.7vw;
+}
+
+.skills .container .row * {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.skills .container .row .bar {
+    width: 100%;
+    height: 25%;
+    background-color: gray;
+    transition: background-color .5s ease;
+    justify-content: flex-start;
+    border-radius: 15px;
+}
+
+
+.skills .container .row .bar .filler {
+    height: 100%;
+    background-color: var(--light);
+    transition: background-color .5s ease;
+    border-radius: 15px;
+}
