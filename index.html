@@ -20,32 +20,28 @@
 <div id="color-mode-btn" onclick="ToggleColors()"></div>
 
 <header>
-    <nav class="navbar">
-    <div class="logo" onclick="location.reload()"><a>Portfolio</a></div>
-    <ul class="menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#hobbies">Hobbies</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div class="menu-btn center_CSS">≡</div>
-    <!-- <img style="border-radius: 50%" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="40">-->
-</nav>
+    <nav class="navbar" id="navbar">
+        <div class="logo" onclick="location.reload()"><a>Portfolio</a></div>
+        <ul class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-btn center_CSS">≡</div>
+        <!-- <img style="border-radius: 50%" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="40">-->
+    </nav>
 </header>
 
 <main>
     <section class="home" id="home">
         <div class="home-content">
-            <div class="text center_JS" id="home-text-3">And this is my portfolio</div>
-            <div class="content">
-                <div class="text center_JS" id="home-text-1">Hello, my name is Danny Mulder</div>
-                <div class="text center_JS" id="home-text-2">I am a Software Developer</div>
-            </div>
-            <img class="img" src="Images/cat.png" alt="">
+            <div id="home-img"></div>
         </div>
     </section>
+
     <section class="about" id="about">
         <div class="subheading center_CSS observe">About</div>
         <div class="about-content">
@@ -90,7 +86,10 @@
             </div>
 
             <a href=Images/cv.pdf download>
-                <button>Download mijn CV</button>
+                <button><span>DOWNLOAD</span> my CV</button>
+            </a>
+            <a href=Images/cv.pdf>
+                <button>Open in <span>BROWSER</span></button>
             </a>
         </div>
     </section>
@@ -101,8 +100,10 @@
                 <div class="title">Explanations</div>
                 <hr>
                 <br>
-                <p>I really enjoy playing around with JavaScript. You can make everything so interactive. HTML is so boring
-                    , but you can not go without it. CSS on the other hand I do not wanna talk about. Hate it. I also love
+                <p>I really enjoy playing around with JavaScript. You can make everything so interactive. HTML is so
+                    boring
+                    , but you can not go without it. CSS on the other hand I do not wanna talk about. Hate it. I also
+                    love
                     working with databases and do not know why?
                     <br>
                     <br>

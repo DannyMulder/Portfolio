@@ -1,13 +1,15 @@
 .navbar {
     position: fixed;
+    top: 0;
     height: 10vh;
     background-color: var(--light);
     color: var(--dark);
     z-index: 999;
+    transform: translateY(0);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    transition: background-color .5s ease, color .5s ease;
+    transition: background-color .5s ease, color .5s ease, transform 1s ease;
 }
 
 .navbar .logo a {
@@ -45,4 +47,8 @@
     .navbar .menu {
         display: none;
     }
+}
+
+.navbar.hidden {
+    transform: translateY(-100%);
 }

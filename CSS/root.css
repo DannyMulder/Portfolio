@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 :root {
-    /*NKijpma url: github.com/NKijpma     - niet mijn github*/
     --dark: black;
     --light: white;
+    --longImg: url("../Images/earth.png");
+    --shortImg: url("../Images/neutronStar.png");
 }
 
 body.light {
     --dark: white;
     --light: black;
+    --longImg: url("../Images/whiteCat.png");
+    --shortImg: url("../Images/rose.png");
 }

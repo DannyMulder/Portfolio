@@ -49,12 +49,12 @@ body {
     opacity: 0;
 }
 
-.navbar .menu, .navbar .logo, .home, .about, .skills, .projects, .collabs {
+.navbar .menu, .navbar .logo, .home, .about, .skills, .projects, .hobbies {
     padding: 0 5vw;
     margin: auto;
 }
 
-.navbar, .home, .about, .skills, .projects {
+.navbar, .home, .about, .skills, .projects, .hobbies, .contact{
     width: 100vw;
 }
 
@@ -68,13 +68,9 @@ body {
     width: 20%;
     height: 5vh;
     border-bottom: 1px solid var(--light);
-    box-shadow: 10px 10px 10px 0 black;
+    box-shadow: 5px 5px 5px 0 var(--light);
     margin: 7.5% auto 5%;
     font-size: 1.75vw;
-}
-
-@media (max-width: 600px) {
-
 }
 
 .menu-btn:hover {
@@ -83,13 +79,18 @@ body {
 
 #color-mode-btn {
     position: fixed;
-    right: 1vw;
-    bottom: 1vw;
-    width: 5vh;
-    aspect-ratio: 1;
-    border-radius: 50%;
+    right: 1rem;
+    bottom: 1rem;
+
+    width: 50px;
+    height: 50px;
+
     background-color: var(--light);
     background-image: url("../Images/color-mode.png");
-    z-index: 999;
-    cursor: pointer;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border-radius: 50%;
+    z-index: 9999;
 }

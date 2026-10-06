@@ -40,12 +40,10 @@ async function ShowSlowText(msPerDiv, divs, allAtOnce) {
     }
 }
 
-ShowSlowLetters(50, 1000, GetDivs(["home-text-1", "home-text-2"])).then(_ => ShowSlowText(0, GetDivs(["home-text-3"]), true));
-
 const observer = new IntersectionObserver((entries) => {
     for (const entry of entries) {
         if (entry.isIntersecting) {
-            entry.target.style.animation = "SmoothShowUp 2s ease-in forwards";
+            entry.target.style.animation = "SmoothShowUp 1s ease-in forwards";
             observer.unobserve(entry.target);
         }
     }
@@ -60,3 +58,33 @@ document.querySelectorAll(".observe").forEach(div => {
 function ToggleColors() {
     document.body.classList.toggle("light");
 }
+
+let lastScrollY = window.scrollY;
+let mouseOnNavbar = false;
+const navbar = document.getElementById("navbar")
+const navbarHeight = navbar.getBoundingClientRect().height;
+
+document.addEventListener("scroll", () => {
+    if (mouseOnNavbar) return;
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY) {
+        navbar.classList.add("hidden");
+    } else if (currentScrollY < lastScrollY) {
+        navbar.classList.remove("hidden");
+    }
+
+    lastScrollY = currentScrollY;
+});
+
+document.addEventListener("mousemove", (e) => {
+    if (e.clientY < navbarHeight) {
+        mouseOnNavbar = true;
+        navbar.classList.remove("hidden");
+    }
+});
+
+navbar.addEventListener("mouseleave", () => {
+    navbar.classList.add("hidden");
+    mouseOnNavbar = false;
+})
