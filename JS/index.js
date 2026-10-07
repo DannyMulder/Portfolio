@@ -77,8 +77,8 @@ document.addEventListener("scroll", () => {
     lastScrollY = currentScrollY;
 });
 
-document.addEventListener("touchend", () => navbar.classList.add("hidden"));
-document.addEventListener("touchstart", () => navbar.classList.remove("hidden"));
+// document.addEventListener("touchend", () => navbar.classList.add("hidden"));
+// document.addEventListener("touchstart", () => navbar.classList.remove("hidden"));
 
 document.addEventListener("mouseover", (e) => {
     if (e.clientY < navbarHeight) {
@@ -92,7 +92,7 @@ navbar.addEventListener("mouseleave", () => {
     mouseOnNavbar = false;
 })
 
-menu = document.getElementById("menu-btn");
-function Menu() {
-    menu
-}
+// menu = document.getElementById("menu-btn");
+// function Menu() {
+//     if (menu)
+// }

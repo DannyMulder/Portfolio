@@ -1,6 +1,7 @@
 .projects {
     overflow: hidden;
     height: 50vw;
+    padding: 0 0 5vw 0;
 }
 
 .projects .projects-content {

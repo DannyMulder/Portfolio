@@ -33,7 +33,6 @@
 
 .navbar.hidden {
     transform: translateY(-100%);
-    transition: translate;
 }
 
 #menu-btn {
@@ -42,6 +41,15 @@
 
 #menu-btn:hover {
     color: wheat;
+}
+
+#menu {
+    transition: transform 1s ease;
+    transform: translateX(0);
+}
+
+#menu.hidden {
+    transform: translateX(-100%);
 }
 
 @media (max-width: 600px) {
