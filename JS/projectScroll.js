@@ -15,32 +15,35 @@ let fastestSpeed = 0;
 let idleSpeed = 1;
 let smoothOffset = spaceBetweenBox / 2;
 
-scrollBoxes.forEach((box, i) => box.addEventListener("click", () => {
-    timeOut = ClearAllTimeOuts()
-    interval = ClearInterval(interval);
+scrollBoxes.forEach((box, i) => {
+    box.onclick = () => new Audio("/Sounds/meow.mp3").play();
+    box.addEventListener("click", () => {
+        timeOut = ClearAllTimeOuts()
+        interval = ClearInterval(interval);
 
-    for (let i = 0; i < scrollBoxes.length; i++)
-        MoveScrollBox(i, 1);
+        for (let i = 0; i < scrollBoxes.length; i++)
+            MoveScrollBox(i, 1);
 
-    interval = setInterval(() => {
-        let distance = Math.round(scrollBoxesCords[i] + boxWidth / 2 - window.innerWidth / 2);
-        if (distance < 1 && distance > -1 || hasDragged) {
-            interval = ClearInterval(interval);
-            hasDragged = false;
-            return;
-        }
-        let speed = Math.sign(distance) * 5;
-        for (let j = 0; j < scrollBoxes.length; j++) {
-            MoveScrollBox(j, -speed);
-            ScrollVisuals(10000);
-        }
+        interval = setInterval(() => {
+            let distance = Math.round(scrollBoxesCords[i] + boxWidth / 2 - window.innerWidth / 2);
+            if (distance < 1 && distance > -1 || hasDragged) {
+                interval = ClearInterval(interval);
+                hasDragged = false;
+                return;
+            }
+            let speed = Math.sign(distance) * 5;
+            for (let j = 0; j < scrollBoxes.length; j++) {
+                MoveScrollBox(j, -speed);
+                ScrollVisuals(10000);
+            }
+        });
     });
-}));
+});
 
 ["mousedown", "touchstart"].forEach(listener => {
     scrollbar.addEventListener(listener, (e) => {
         timeOut = ClearTimeOut(timeOut);
-        oldMousePos = getX(e);
+        oldMousePos = GetX(e);
         fastestSpeed = 0;
         dragging = true;
     });
@@ -51,7 +54,7 @@ scrollBoxes.forEach((box, i) => box.addEventListener("click", () => {
         if (!dragging) return;
         hasDragged = true;
 
-        const speed = getX(e) - oldMousePos;
+        const speed = GetX(e) - oldMousePos;
         if (speed < 100 && speed > -100) fastestSpeed = speed;
 
         for (let i = 0; i < scrollBoxes.length; i++) {
@@ -60,7 +63,7 @@ scrollBoxes.forEach((box, i) => box.addEventListener("click", () => {
             scrollBoxes[i].style.transform = "scale(1)";
         }
 
-        oldMousePos = getX(e);
+        oldMousePos = GetX(e);
     });
 });
 
@@ -123,13 +126,6 @@ function ScrollVisuals(idleDuration) {
             break;
         } else idleSpeed = 1;
     }
-}
-
-function getX(e) {
-    if (e.touches && e.touches.length > 0) {
-        return e.touches[0].clientX;
-    }
-    return e.clientX;
 }
 
 window.addEventListener("resize", () => {

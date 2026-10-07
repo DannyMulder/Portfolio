@@ -31,8 +31,17 @@
     margin-left: 25px;
 }
 
-.menu-btn {
+.navbar.hidden {
+    transform: translateY(-100%);
+    transition: translate;
+}
+
+#menu-btn {
     display: none;
+}
+
+#menu-btn:hover {
+    color: wheat;
 }
 
 @media (max-width: 600px) {
@@ -47,8 +56,4 @@
     .navbar .menu {
         display: none;
     }
-}
-
-.navbar.hidden {
-    transform: translateY(-100%);
 }

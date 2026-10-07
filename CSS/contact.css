@@ -1,8 +1,10 @@
 .contact {
-    height: 25vh;
+    height: 10vh;
+    background-color: black;
 }
 
 .contact .contact-content {
     width: 100%;
     height: 100%;
+    background-color: white;
 }

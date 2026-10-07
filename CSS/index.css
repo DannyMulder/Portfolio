@@ -54,7 +54,7 @@ body {
     margin: auto;
 }
 
-.navbar, .home, .about, .skills, .projects, .hobbies, .contact{
+.navbar, .home, .about, .skills, .projects, .hobbies, .contact {
     width: 100vw;
 }
 
@@ -70,11 +70,14 @@ body {
     border-bottom: 1px solid var(--light);
     box-shadow: 5px 5px 5px 0 var(--light);
     margin: 7.5% auto 5%;
-    font-size: 1.75vw;
+    font-size: 2vw;
 }
 
-.menu-btn:hover {
-    color: wheat;
+@media (max-width: 600px) {
+    .subheading {
+        width: 50%;
+        font-size: 2vh;
+    }
 }
 
 #color-mode-btn {

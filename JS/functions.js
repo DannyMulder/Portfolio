@@ -55,3 +55,17 @@ function ClearAllIntervals() {
     activeIntervals = []
     return null
 }
+
+function GetX(e) {
+    if (e.touches && e.touches.length > 0) {
+        return e.touches[0].clientX;
+    }
+    return e.clientX;
+}
+
+function GetY(e) {
+    if (e.touches && e.touches.length > 0) {
+        return e.touches[0].clientY;
+    }
+    return e.clientY;
+}

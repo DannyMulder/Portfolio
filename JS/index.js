@@ -77,14 +77,22 @@ document.addEventListener("scroll", () => {
     lastScrollY = currentScrollY;
 });
 
-document.addEventListener("mousemove", (e) => {
+document.addEventListener("touchend", () => navbar.classList.add("hidden"));
+document.addEventListener("touchstart", () => navbar.classList.remove("hidden"));
+
+document.addEventListener("mouseover", (e) => {
     if (e.clientY < navbarHeight) {
         mouseOnNavbar = true;
         navbar.classList.remove("hidden");
     }
-});
+})
 
 navbar.addEventListener("mouseleave", () => {
     navbar.classList.add("hidden");
     mouseOnNavbar = false;
 })
+
+menu = document.getElementById("menu-btn");
+function Menu() {
+    menu
+}
