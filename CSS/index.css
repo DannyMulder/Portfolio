@@ -45,6 +45,18 @@ body {
     background-size: 100% 100%;
 }
 
+@media (orientation: landscape) {
+    p, span {
+        line-height: 1vw !important;
+    }
+}
+
+@media (orientation: portrait) {
+    p, span {
+        line-height: 2vh !important;
+    }
+}
+
 .observe {
     opacity: 0;
 }

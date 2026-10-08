@@ -1,5 +1,5 @@
 .skills {
-    min-height: 50vh;
+
 }
 
 .skills .skills-content {
@@ -14,7 +14,7 @@
 .skills .text {
     display: flex;
     flex-direction: column;
-    padding: 25px;
+    padding: 2.5vw;
 }
 
 .skills .text .title {
@@ -32,32 +32,30 @@
     font-weight: 300;
 }
 
-.skills .container {
-    padding: 25px;
+.skills .progression {
+    padding: 2.5vw
 }
 
-.skills .container .row {
+.skills .progression .row {
     width: 100%;
     height: 5vh;
     display: grid;
     grid-template-columns: 20% 70% 10%;
     margin-bottom: 2.5%;
-    padding: 10px;
 }
 
-.skills .container .row span {
+.skills .progression .row span {
     text-decoration: underline;
-    font-size: 0.7vw;
+    font-size: 0.75vw;
 }
 
-.skills .container .row * {
+.skills .progression .row * {
     display: flex;
     justify-content: center;
     align-self: center;
 }
 
-.skills .container .row .bar {
-    width: 100%;
+.skills .progression .row .bar {
     height: 25%;
     background-color: gray;
     transition: background-color .5s ease;
@@ -66,9 +64,35 @@
 }
 
 
-.skills .container .row .bar .filler {
+.skills .progression .row .bar .filler {
     height: 100%;
     background-color: var(--light);
     transition: background-color .5s ease;
     border-radius: 15px;
+}
+
+@media (max-width: 600px){
+    .skills .skills-content {
+        grid-template-columns: 1fr;
+    }
+
+    .skills .text .title {
+        font-size: 1.5vh;
+    }
+
+    .skills .text span {
+        font-size: 1vh;
+    }
+
+    .skills p {
+        font-size: 1.25vh;
+    }
+
+    .skills .progression .row span {
+        font-size: 2vw;
+    }
+
+    .skills .progression .row {
+        grid-template-columns: 30% 60% 10%;
+    }
 }
