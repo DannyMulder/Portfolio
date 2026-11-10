@@ -1,44 +1,7 @@
-function GetDivs(ids) {
-    const divs = [];
-    for (const id of ids) {
-        divs.push(document.getElementById(id));
-    }
-    return divs;
-}
-
-function Wait(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-async function ShowSlowLetters(msPerLetter, msPerDiv, divs) {
-    const wordsPerDiv = divs.map(div => div.innerText);
-    divs.forEach(div => div.innerText = "");
-
-    for (let i = 0; i < divs.length; i++) {
-        const div = divs[i];
-        const text = wordsPerDiv[i];
-        const fragment = document.createDocumentFragment();
-
-        for (let j = 0; j < text.length; j++) {
-            const span = document.createElement("span");
-            span.innerText = text[j];
-            span.style.animation = `SmoothShowUp 0.5s ease-in-out ${j * msPerLetter}ms forwards`;
-            fragment.appendChild(span);
-        }
-
-        div.appendChild(fragment);
-        await Wait(msPerDiv + text.length * msPerLetter);
-    }
-}
-
-
-async function ShowSlowText(msPerDiv, divs, allAtOnce) {
-    if (allAtOnce) {
-        for (const div of divs) {
-            div.style.animation = "SmoothShowUp 2s ease-in forwards";
-        }
-    }
-}
+if (!localStorage.getItem("theme")) {
+    localStorage.setItem("theme", "true");
+    document.body.classList.add("light");
+} else localStorage.getItem("theme") === "true" ? document.body.classList.add("light") : document.body.classList.remove("light");
 
 const observer = new IntersectionObserver((entries) => {
     for (const entry of entries) {
@@ -56,43 +19,50 @@ document.querySelectorAll(".observe").forEach(div => {
 });
 
 function ToggleColors() {
-    document.body.classList.toggle("light");
+    const added = document.body.classList.toggle("light");
+    localStorage.setItem("theme", added.toString());
 }
 
-let lastScrollY = window.scrollY;
 let mouseOnNavbar = false;
-const navbar = document.getElementById("navbar")
+const navbar = document.getElementById("navbar");
 const navbarHeight = navbar.getBoundingClientRect().height;
+const menu = document.getElementById("menu");
+let menuOpen = false;
 
-document.addEventListener("scroll", () => {
-    if (mouseOnNavbar) return;
-    const currentScrollY = window.scrollY;
+document.addEventListener("wheel", (e) => {
+    if (mouseOnNavbar || menuOpen) return;
 
-    if (currentScrollY > lastScrollY) {
+    if (e.deltaY > 0) {
         navbar.classList.add("hidden");
-    } else if (currentScrollY < lastScrollY) {
+    } else if (e.deltaY < 0) {
         navbar.classList.remove("hidden");
     }
-
-    lastScrollY = currentScrollY;
 });
 
-// document.addEventListener("touchend", () => navbar.classList.add("hidden"));
-// document.addEventListener("touchstart", () => navbar.classList.remove("hidden"));
+document.addEventListener("touchstart", (e) => {
+    if (e.target.id === "color-mode-btn") return;
 
-document.addEventListener("mouseover", (e) => {
-    if (e.clientY < navbarHeight) {
-        mouseOnNavbar = true;
-        navbar.classList.remove("hidden");
-    }
+    if (GetY(e) > navbarHeight) navbar.classList.add("hidden");
+    else navbar.classList.remove("hidden")
+})
+
+navbar.addEventListener("mouseenter", () => {
+    mouseOnNavbar = true;
 })
 
 navbar.addEventListener("mouseleave", () => {
-    navbar.classList.add("hidden");
     mouseOnNavbar = false;
+    if ("ontouchstart" in window) return;
+    navbar.classList.add("hidden");
 })
 
-// menu = document.getElementById("menu-btn");
-// function Menu() {
-//     if (menu)
-// }
+function Menu() {
+    menuOpen = menu.classList.toggle("show");
+}
+
+function CloseMenu() {
+    setTimeout(() => {
+        menu.classList.remove("show");
+        menuOpen = false;
+    });
+}

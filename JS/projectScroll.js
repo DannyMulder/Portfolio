@@ -1,19 +1,22 @@
 const scrollbar = document.getElementById("scrollbar");
 const scrollBoxes = document.querySelectorAll(".projects .box");
+
 let boxWidth = scrollBoxes[0].getBoundingClientRect().width;
 let spaceBetweenBox = window.innerWidth / 2;
 let totalWidth = scrollBoxes.length * spaceBetweenBox;
 let minX = -boxWidth;
 let maxX = minX + totalWidth;
 let scrollBoxesCords = [...scrollBoxes].map((_, i) => minX + i * spaceBetweenBox);
+let smoothOffset = spaceBetweenBox / 2;
+
 let timeOut = null;
 let interval = null;
 let dragging = false;
 let hasDragged = false;
+
 let oldMousePos = 0;
 let fastestSpeed = 0;
 let idleSpeed = 1;
-let smoothOffset = spaceBetweenBox / 2;
 
 scrollBoxes.forEach((box, i) => {
     box.onclick = () => new Audio("./Sounds/meow.mp3").play();

@@ -4,7 +4,7 @@
     height: 10vh;
     background-color: var(--light);
     color: var(--dark);
-    z-index: 999;
+    z-index: 9999;
     transform: translateY(0);
     display: flex;
     align-items: center;
@@ -28,7 +28,7 @@
     color: var(--dark);
     font-size: clamp(1vw, 1.5vh, 2vw);
     font-weight: 500;
-    margin-left: 25px;
+    margin-left: 2vw;
 }
 
 .navbar.hidden {
@@ -36,29 +36,41 @@
 }
 
 #menu-btn {
+    color: var(--dark);
+    padding-right: 5vw;
+    aspect-ratio: 1;
+    font-size: 10vw;
     display: none;
-}
-
-#menu-btn:hover {
-    color: wheat;
+    cursor: pointer;
+    z-index: 9999;
 }
 
 #menu {
-    transition: transform 1s ease;
-    transform: translateX(0);
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--dark);
+    transition: left 1s ease;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20vh;
+    gap: 5vh;
 }
 
-#menu.hidden {
-    transform: translateX(-100%);
+#menu li a {
+    color: var(--light);
+}
+
+#menu.show {
+    left: 0;
 }
 
 @media (max-width: 600px) {
-    .menu-btn {
-        padding: 5vw;
-        aspect-ratio: 1;
-        font-size: 10vw;
+    #menu-btn {
         display: flex;
-        cursor: pointer;
     }
 
     .navbar .menu {

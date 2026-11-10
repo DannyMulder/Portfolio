@@ -6,7 +6,12 @@ body {
     overflow-x: hidden;
     background-color: var(--dark);
     color: var(--light);
-    transition: background .5s ease, color .5s ease;
+    transition: background .5s ease, color .5s ease, border .5s ease;
+}
+
+img {
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .center_JS {
@@ -47,7 +52,7 @@ body {
 
 @media (orientation: landscape) {
     p, span {
-        line-height: 1vw !important;
+        line-height: 1.25vw !important;
     }
 }
 
@@ -61,7 +66,7 @@ body {
     opacity: 0;
 }
 
-.navbar .menu, .navbar .logo, .home, .about, .skills, .projects, .hobbies {
+.navbar .menu, .navbar .logo, .about, .skills, .projects, .hobbies {
     padding: 0 5vw;
     margin: auto;
 }
@@ -83,6 +88,23 @@ body {
     box-shadow: 5px 5px 5px 0 var(--light);
     margin: 7.5% auto 5%;
     font-size: 2vw;
+    font-weight: bold;
+}
+
+#color-mode-btn {
+    position: fixed;
+    right: 1vw;
+    bottom: 1vw;
+    width: 5vh;
+    aspect-ratio: 1;
+    background: url("../Images/color-mode.png") center / contain no-repeat;
+    border: 0.1vw solid var(--light);
+    border-radius: 50%;
+    z-index: 9999;
+}
+
+#color-mode-btn:hover {
+    cursor: pointer;
 }
 
 @media (max-width: 600px) {
@@ -90,22 +112,4 @@ body {
         width: 50%;
         font-size: 2vh;
     }
-}
-
-#color-mode-btn {
-    position: fixed;
-    right: 1rem;
-    bottom: 1rem;
-
-    width: 50px;
-    height: 50px;
-
-    background-color: var(--light);
-    background-image: url("../Images/color-mode.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    border-radius: 50%;
-    z-index: 9999;
 }

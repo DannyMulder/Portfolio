@@ -3,13 +3,13 @@
 :root {
     --dark: black;
     --light: white;
-    --longImg: url("../Images/earth.png");
-    --shortImg: url("../Images/neutronStar.png");
+    --longImg: url("../Images/sunDark.png");
+    --shortImg: url("../Images/polygonDark.png");
 }
 
 body.light {
     --dark: white;
     --light: black;
-    --longImg: url("../Images/whiteCat.png");
-    --shortImg: url("../Images/rose.png");
+    --longImg: url("../Images/sunLight.png");
+    --shortImg: url("../Images/polygonLight.png");
 }

@@ -20,4 +20,5 @@
     height: 100%;
     aspect-ratio: 1;
     border-radius: 1vw;
+    border: 0.25vw solid var(--light);
 }

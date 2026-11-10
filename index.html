@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="CSS/projects.css">
     <link rel="stylesheet" href="CSS/hobbies.css">
     <link rel="stylesheet" href="CSS/contact.css">
-    <link href="Images/cat.png" rel="icon" type="image/png">
+    <link href="Images/icon.png" rel="icon" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -21,18 +21,28 @@
 <div id="color-mode-btn" onclick="ToggleColors()"></div>
 
 <header>
-    <nav class="navbar" id="navbar">
-        <div class="logo" onclick="location.reload()"><a>Portfolio</a></div>
-        <ul class="menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#hobbies">Hobbies</a></li>
-            <li><a href="#contact">Contact</a></li>
+    <nav>
+        <div class="navbar" id="navbar">
+            <div class="logo" onclick="location.reload()"><a>Portfolio</a></div>
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="center_CSS" id="menu-btn" onclick="Menu()">≡</div>
+            <!-- <img style="border-radius: 50%" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="40">-->
+        </div>
+        <ul id="menu">
+            <li class="center_horizontal"><a href="#home" onclick="CloseMenu()">Home</a></li>
+            <li class="center_horizontal"><a href="#about" onclick="CloseMenu()">About</a></li>
+            <li class="center_horizontal"><a href="#skills" onclick="CloseMenu()">Skills</a></li>
+            <li class="center_horizontal"><a href="#projects" onclick="CloseMenu()">Projects</a></li>
+            <li class="center_horizontal"><a href="#hobbies" onclick="CloseMenu()">Hobbies</a></li>
+            <li class="center_horizontal"><a href="#contact" onclick="CloseMenu()">Contact</a></li>
         </ul>
-        <div class="center_CSS" id="menu-btn" onclick="Menu()">≡</div>
-        <!-- <img style="border-radius: 50%" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="40">-->
     </nav>
 </header>
 
@@ -46,30 +56,35 @@
         <div class="subheading center_CSS observe">About</div>
         <div class="about-content">
             <div class="info-box observe">
-                <img src="Images/unknownUser.png" alt="">
+                <img src="Images/profilePic.png" alt="">
                 <div class="content">
                     <div class="title center_CSS">About me</div>
                     <div class="text center_CSS">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci ea
-                            harum illum ipsam nam. Ab aliquid beatae dolor ex expedita ipsum, iste laborum natus, nemo
-                            numquam officiis possimus, quas tempora!
+                            My name is Danny Mulder. I'm 17 years old, and I'm studying to become a Software Developer.
+                            I like playing chess with some friends at school and even started my own Chess Engine.
+                            I enjoy working on the Back-End the most, especially with databases.
+                            I collaborate well with others, especially on team projects.
+                            <br>
+                            <br>
+                            You can find my Personal Info by opening my CV.
                         </p>
                     </div>
                 </div>
             </div>
 
             <div class="info-box center_right observe">
-                <img src="Images/questionMark.png" alt="">
+                <img src="Images/why.png" alt="">
                 <div class="content">
                     <div class="title center_CSS">Why Software Developer?</div>
                     <div class="text center_CSS">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur
-                            aut commodi enim eos explicabo iure nesciunt quibusdam quis rem ut. Dolores, enim expedita ipsam
-                            iusto labore minima quasi suscipit tenetur. Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Beatae dicta doloremque eaque eos magnam magni voluptas voluptatum. Cupiditate deserunt
-                            iusto nesciunt, nostrum perspiciatis porro tempore vero. Adipisci aliquid similique tempore?
+                            When I was a kid, I found it fascinating how websites worked.
+                            This already made me curious about coding.
+                            I also liked gaming, which got me into Game Development.
+                            During an open day, I was told that I was too late with any coding experience,
+                            and they offered me the Software Developer program.
+                            I liked that and decided to go for it.
                         </p>
                     </div>
                 </div>
@@ -81,43 +96,61 @@
                     <div class="title center_CSS">Future</div>
                     <div class="text center_CSS">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
-                            aperiam architecto aut blanditiis dolor eius illum iste molestias, natus nostrum placeat porro
-                            quo saepe sed temporibus totam vel velit voluptatem. Lorem ipsum dolor sit amet, consectetur
-                            adipisicing elit. Accusantium aspernatur consequatur, enim et eum facilis id illum inventore
-                            nesciunt nobis non nostrum, numquam provident quam rerum sint soluta totam voluptatibus! Lorem
-                            ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam eligendi, est expedita fuga
-                            in incidunt, ipsa libero maiores molestias nisi odit praesentium quae quam quod recusandae
-                            veritatis voluptate voluptatum?
+                            I don't know yet what I want to become, but I want to learn more about Game Development.
+                            I might want to make my own game later.
+                            I know that AI is getting bigger and better every year and could take over my job in the
+                            future.
                         </p>
                     </div>
                 </div>
             </div>
 
-            <a href=Images/cv.pdf download>
-                <button><span>DOWNLOAD</span> my CV</button>
-            </a>
-            <a href=Images/cv.pdf>
-                <button>Open in <span>BROWSER</span></button>
-            </a>
+            <div class="cv observe">
+                <div class="center_CSS">English:</div>
+                <a class="center_CSS" href=Images/cvEN.pdf download>
+                    DOWNLOAD my CV
+                </a>
+                <a class="center_CSS" href=Images/cvEN.pdf>
+                    Open on this PAGE
+                </a>
+                <a class="center_CSS" href=Images/cvEN.pdf>
+                    Open in new TAB
+                </a>
+
+                <div class="center_CSS">Nederlands:</div>
+                <a class="center_CSS" href=Images/cvNL.pdf download>
+                    DOWNLOAD my CV
+                </a>
+                <a class="center_CSS" href=Images/cvNL.pdf>
+                    Open on this PAGE
+                </a>
+                <a class="center_CSS" href=Images/cvNL.pdf>
+                    Open in new TAB
+                </a>
+            </div>
         </div>
     </section>
     <section class="skills" id="skills">
         <div class="subheading center_CSS observe">Skills</div>
         <div class="skills-content observe">
             <div class="text">
-                <div class="title center_CSS">Explanations</div>
+                <div class="title center_CSS">Explanation</div>
                 <hr>
                 <br>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores aut deleniti facilis,
-                    harum ipsum nam nihil odio pariatur quae, quia ratione recusandae, reiciendis saepe tempore?
-                    Adipisci impedit quasi rem.
+                    I find building websites one of the most fun things to do.
+                    CSS is a bit less interesting than HTML.
+                    JavaScript is the most fun.
+                    I usually use C# when I have a task that needs to be done quickly.
+                    I use PHP for connections with SQL and Python for PyGame.
                 </p>
                 <br>
                 <span>100% means I fully understand how to work with the language. This includes work speed and knowledge</span>
             </div>
             <div class="progression">
+                <div class="title center_CSS">Progress</div>
+                <hr>
+                <br>
                 <div class="row">
                     <p><span>HTML</span></p>
                     <div class="bar">
@@ -156,7 +189,14 @@
                 <div class="row">
                     <p><span>C#</span></p>
                     <div class="bar">
-                        <div class="filler" style="width: 40%;"></div>
+                        <div class="filler" style="width: 50%;"></div>
+                    </div>
+                    <p>40%</p>
+                </div>
+                <div class="row">
+                    <p><span>PYTHON</span></p>
+                    <div class="bar">
+                        <div class="filler" style="width: 50%;"></div>
                     </div>
                     <p>40%</p>
                 </div>
@@ -167,11 +207,11 @@
         <div class="subheading center_CSS observe">Projects</div>
         <div class="projects-content observe">
             <div id="scrollbar">
-                <div style="background-image: url(Images/cat.png);"
+                <div style="background-image: url(Images/project1.png);"
                      class="box"></div>
-                <div style="background-image: url(Images/cat1.png);"
+                <div style="background-image: url(Images/project2.png);"
                      class="box"></div>
-                <div style="background-image: url(Images/cat2.png);"
+                <div style="background-image: url(Images/project3.png);"
                      class="box"></div>
             </div>
         </div>
@@ -179,14 +219,35 @@
     <section class="hobbies" id="hobbies">
         <div class="subheading center_CSS observe">Hobbies</div>
         <div class="hobbies-content">
-            Hey hey
+            <a href="https://www.chess.com/member/danny-mulder" target="_blank" class="box observe">
+                <div class="img-container center_CSS"><img src="Images/chess.png" alt=""></div>
+                <p class="center_CSS">Chess</p>
+                <hr>
+            </a>
+
+            <a href="https://psnprofiles.com/piranha1342" target="_blank" class="box observe">
+                <div class="img-container center_CSS"><img src="Images/gaming.png" alt=""></div>
+                <p class="center_CSS">Gaming</p>
+                <hr>
+            </a>
         </div>
     </section>
 </main>
 
-<footer class="contact" id="contact">
-    <div class="contact-content">
-        ik ben de footer
+<footer>
+    <div class="contact observe" id="contact">
+        <div class="subheading center_CSS observe">Contact</div>
+        <div class="contact-content">
+            <div class="row">
+                <a href="https://github.com/DannyMulder" target="_black" class="column center_CSS">Github</a>
+                <a href="mailto:dan.mulder2009@gmail.com" target="_black" class="column center_CSS">Email</a>
+                <a href="Images/cvEN.pdf" target="_black" class="column center_CSS">CV</a>
+            </div>
+            <div class="row">
+                <a href="https://psnprofiles.com/piranha1342" target="_black" class="column center_CSS">PSN</a>
+                <a href="https://www.chess.com/member/danny-mulder" target="_black" class="column center_CSS">Chess</a>
+            </div>
+        </div>
     </div>
 </footer>
 

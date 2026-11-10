@@ -5,4 +5,32 @@
 .hobbies .hobbies-content {
     width: 100%;
     height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.hobbies .box {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+.hobbies .box .img-container {
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.hobbies .box img {
+    width: 100%;
+}
+
+.hobbies .box p {
+    height: 5vh;
+    color: var(--light);
+}
+
+@media (max-width: 600px) {
+    .hobbies .hobbies-content {
+        grid-template-columns: 1fr 1fr;
+    }
 }
