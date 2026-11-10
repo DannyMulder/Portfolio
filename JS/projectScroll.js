@@ -19,7 +19,6 @@ let fastestSpeed = 0;
 let idleSpeed = 1;
 
 scrollBoxes.forEach((box, i) => {
-    box.onclick = () => new Audio("./Sounds/meow.mp3").play();
     box.addEventListener("click", () => {
         timeOut = ClearAllTimeOuts()
         interval = ClearInterval(interval);
